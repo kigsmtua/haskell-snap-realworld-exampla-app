@@ -14,4 +14,30 @@ For more information on how to this works with other frontends/backends, head ov
 # Getting Started
 
 ## Installation
- > TODO
+
+Install [Stack](https://docs.haskellstack.org/en/stable/README/).
+
+Install [PostgreSQL](https://www.postgresql.org/).
+
+You can us well run docker-compose up db to run the included postgres container
+
+Clone the repository and cd to repo
+
+    git clone https://github.com/kigsmtua/haskell-snap-realworld-example-app.git
+
+    cd haskell-snap-realworld-example-app
+
+Install GHC
+
+    stack setup
+
+Install dependencies and build project
+
+    stack build
+
+Run project
+
+    stack exec conduit
+
+Alternatively, to watch file changes and run the tests automatically
+    stack test --file-watch --coverage
