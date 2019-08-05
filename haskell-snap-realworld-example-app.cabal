@@ -1,28 +1,73 @@
-Name:                haskell-snap-realworld-example-app
-Version:             0.1
-Synopsis:            Project Synopsis Here
-Description:         Project Description Here
-License:             AllRightsReserved
-Author:              Author
-Maintainer:          maintainer@example.com
-Stability:           Experimental
-Category:            Web
-Build-type:          Simple
-Cabal-version:       >=1.2
+-- This file has been generated from package.yaml by hpack version 0.28.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 2a6e3024de654ee0cf398c9a5f4169eed4dc434e80aa712b51381efac34b1d87
 
-Executable haskell-snap-realworld-example-app
-  hs-source-dirs: src
+name:           haskell-snap-realworld-example-app
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/kigsmtua/haskell-snap-realworld-example-app#readme>
+homepage:       https://github.com/kigsmtua/haskell-snap-realworld-example-app#readme
+bug-reports:    https://github.com/kigsmtua/haskell-snap-realworld-example-app/issues
+author:         John Kiragu
+maintainer:     mutuakiragu@gmail.com
+copyright:      2019 John Kiragu
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/kigsmtua/haskell-snap-realworld-example-app
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_haskell_snap_realworld_example_app
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , bytestring >=0.9.1 && <0.11
+    , mtl >=2 && <3
+    , snap-core >=1.0 && <1.1
+    , snap-server >=1.0 && <1.2
+  default-language: Haskell2010
+
+executable conduit
   main-is: Main.hs
+  other-modules:
+      Paths_haskell_snap_realworld_example_app
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -funbox-strict-fields
+  build-depends:
+      base >=4.7 && <5
+    , bytestring >=0.9.1 && <0.11
+    , conduit
+    , mtl >=2 && <3
+    , snap-core >=1.0 && <1.1
+    , snap-server >=1.0 && <1.2
+  default-language: Haskell2010
 
-  Build-depends:
-    base                      >= 4     && < 5,
-    bytestring                >= 0.9.1 && < 0.11,
-    mtl                       >= 2     && < 3,
-    snap-core                 >= 1.0   && < 1.1,
-    snap-server               >= 1.0   && < 1.2
-
-  if impl(ghc >= 6.12.0)
-    ghc-options: -threaded -Wall -fwarn-tabs -funbox-strict-fields -O2
-                 -fno-warn-unused-do-bind
-  else
-    ghc-options: -threaded -Wall -fwarn-tabs -funbox-strict-fields -O2
+test-suite conduit-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_haskell_snap_realworld_example_app
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , bytestring >=0.9.1 && <0.11
+    , conduit
+    , mtl >=2 && <3
+    , snap-core >=1.0 && <1.1
+    , snap-server >=1.0 && <1.2
+  default-language: Haskell2010
