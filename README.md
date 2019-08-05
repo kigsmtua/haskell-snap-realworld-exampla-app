@@ -1,5 +1,7 @@
 # ![RealWorld Example App](logo.png)
 
+> **WIP**
+
 > ### Haskell/SnapFramework codebase containing real world examples (CRUD, auth, advanced patterns, etc) that adheres to the [RealWorld](https://github.com/gothinkster/realworld-example-apps) spec and API.
 
 This codebase was created to demonstrate a fully fledged fullstack application built with **Haskell/SnapFramework** including CRUD operations, authentication, routing, pagination, and more.
