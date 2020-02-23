@@ -21,5 +21,6 @@ cabal.project.local~
 .HTF/
 .ghc.environment.*
 .stack-work/
+log/
 *~
 haskell-snap-realworld-example-app.cabal
