@@ -20,6 +20,10 @@ dependencies:
 - persistent-sqlite
 - persistent
 - persistent-template
+- monad-control
+- monad-logger
+- text
+- esqueleto
 - snap-core >= 1.0 && < 1.1
 - snap-server >= 1.0 && < 1.2
 
