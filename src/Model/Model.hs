@@ -12,12 +12,11 @@
 {-# LANGUAGE FlexibleContexts #-}
 {-# LANGUAGE StandaloneDeriving #-}
 
-
 module Model where
 
 import Database.Persist
 import Database.Persist.Sqlite
 import Database.Persist.TH
 
--- 
-share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase]
+--
+share [ mkPersist sqlSettings, mkMigrate "migrateAll" ] [ persistLowerCase ]
