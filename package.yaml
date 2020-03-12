@@ -33,7 +33,7 @@ library:
   source-dirs: src
 
 executables:
-  conduit-exe:
+  haskell-snap-realworld-example-app-exe:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
@@ -42,7 +42,7 @@ executables:
     - -with-rtsopts=-N
     - -funbox-strict-fields
     dependencies:
-    - conduit
+    - haskell-snap-realworld-example-app
 
 tests:
   conduit-test:
