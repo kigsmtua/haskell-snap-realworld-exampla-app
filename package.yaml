@@ -45,7 +45,7 @@ executables:
     - haskell-snap-realworld-example-app
 
 tests:
-  conduit-test:
+  haskell-snap-realworld-example-app-test:
     main:                Spec.hs
     source-dirs:         test
     ghc-options:
@@ -53,4 +53,4 @@ tests:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - conduit
+    - haskell-snap-realworld-example-app
