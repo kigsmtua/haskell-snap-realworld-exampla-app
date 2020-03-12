@@ -24,13 +24,13 @@ matrix:
   - ghc: 8.6.5
 
 install:
-    # install stack
-    curl -sSL https://get.haskellstack.org/ | sh
-    stack --version
-    stack build
-    
+  # install stack
+  - curl -sSL https://get.haskellstack.org/ | sh
+  - stack --version
+  - stack build
+
 script:
-    stack test --system-ghc
+    stack test
 
 notifications:
   email: false
