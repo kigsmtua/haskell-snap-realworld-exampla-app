@@ -20,7 +20,7 @@ import Database.Persist
 import Database.Persist.Sqlite
 import Database.Persist.TH
 
-share [mkPersist sqlSettings, mkDeleteCascade sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
+share [ mkPersist sqlSettings, mkDeleteCascade sqlSettings, mkMigrate "migrateAll" ][persistLowerCase|
    User
       email Text
       username Text

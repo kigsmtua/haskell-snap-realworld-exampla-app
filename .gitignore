@@ -24,3 +24,5 @@ cabal.project.local~
 log/
 *~
 haskell-snap-realworld-example-app.cabal
+conduit.cabal
+realworld.db

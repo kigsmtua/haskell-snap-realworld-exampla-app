@@ -6,16 +6,15 @@ import Control.Applicative
 import Snap.Core
 import Snap.Util.FileServe
 import Snap.Http.Server
-
 -- Does this even involve using a language in production
 import Database
 
 main :: IO ()
 main = do
-  -- Run migrations
-  dbMigration
-  -- Start  application server
-  quickHttpServe site
+    -- Run migrations
+    dbMigration
+    -- Start  application server
+    quickHttpServe site
 
 site :: Snap ()
 site = ifTop (writeBS "hello world")
