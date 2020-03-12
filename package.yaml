@@ -10,20 +10,30 @@ extra-source-files:
 - README.md
 - ChangeLog.md
 
-description:         Please see the README on GitHub at <https://github.com/kigsmtua/haskell-snap-realworld-example-app#readme>
+description: Please see the README on GitHub at <https://github.com/kigsmtua/haskell-snap-realworld-example-app#readme>
 
 dependencies:
 - base >= 4.7 && < 5
 - bytestring >= 0.9.1 && < 0.11
 - mtl >= 2 && < 3
+- aeson
+- persistent-sqlite
+- persistent
+- persistent-template
+- monad-control
+- monad-logger
+- text
+- esqueleto
 - snap-core >= 1.0 && < 1.1
 - snap-server >= 1.0 && < 1.2
+- time
+- resourcet
 
 library:
   source-dirs: src
 
 executables:
-  conduit:
+  conduit-exe:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
