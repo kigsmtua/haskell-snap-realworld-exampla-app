@@ -12,12 +12,10 @@ import Database
 
 main :: IO ()
 main = do
-   -- Run migrations
-   -- Does this even make any sort of chance and change
-   -- Does this even mean anythingb
-   quickHttpServe site
-
-   -- Proceed to run application server
+  -- Run migrations
+  dbMigration
+  -- Start  application server
+  quickHttpServe site
 
 site :: Snap ()
 site = ifTop (writeBS "hello world")
